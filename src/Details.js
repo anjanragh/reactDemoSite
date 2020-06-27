@@ -4,13 +4,7 @@ import { nominalTypeHack } from 'prop-types';
 
 class Details extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            loading: true
-        }
-    }
+    state = { loading: true };
 
     componentDidMount() {
         pet.animal(this.props.id).then(({ animal }) => {
